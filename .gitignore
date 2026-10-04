@@ -1,0 +1,6 @@
+node_modules/
+*.log
+*.tgz
+lan-gate-state.json
+lan-gate-tokens.md
+.vscode/

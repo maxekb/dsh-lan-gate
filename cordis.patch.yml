@@ -1,0 +1,9 @@
+# dsh-lan-gate bundle patch: inserts the LAN gateway row into the profile roster.
+# The gateway runs inside the DSH host process (no subprocess) and needs only the
+# `webServer` and `connection` services.
+#
+# If a profile already mounts this gateway by file path, replace that row with
+# this one instead of adding a second one: two rows with the same id conflict.
+- insert:
+    - id: lan-gate
+      name: 'dsh-lan-gate'

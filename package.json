@@ -1,0 +1,38 @@
+{
+  "name": "dsh-lan-gate",
+  "version": "1.0.0",
+  "description": "LAN access gateway for the DeepSeek Harness web GUI: a reverse proxy on 0.0.0.0:3088 with device approval, token and cookie binding, per-IP rate limiting and a phone layout mode.",
+  "type": "module",
+  "license": "GPL-3.0-only",
+  "main": "src/lan-gate.mjs",
+  "exports": {
+    ".": "./src/lan-gate.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.1.7-rc.2"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "lan",
+    "remote-access",
+    "reverse-proxy",
+    "mobile"
+  ]
+}
